@@ -19,7 +19,8 @@
 
     <link rel="stylesheet" href="build/css/app.css" />
     <link rel="stylesheet" href="build/css/spinner.css" />
-    <link rel="stylesheet" href="build/css/nice-select.css" />
+
+    <link rel="stylesheet" href="build/css/nice-select2.css" />
   </head>
   <body>
     <section class="contact">
@@ -116,6 +117,7 @@
                   <option value="11">Risk of TMA Recurrence</option>
                   <option value="12">Other</option>
                 </select>
+
                 <div class="error-mesage">
                   <span id="error-2" class="error-validation error-select-topic"
                     >Please select a Topic</span
@@ -211,14 +213,11 @@
     </section>
     <script src="src/js/ultimoris.js " type="module"></script>
 
-    <script src="src//js/jquery.js"></script>
-    <script src="src/js/jquery.nice-select.min.js"></script>
+    <script src="src/js/niceselect2/nice-select2.js"></script>
 
     <script>
-      $(document).ready(function () {
-        $("topic").niceSelect();
-      });
-      $("topic").niceSelect("update");
+      NiceSelect.bind(document.getElementById("topic"));
+    
     </script>
   </body>
 </html>
