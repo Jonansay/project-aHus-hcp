@@ -1,6 +1,13 @@
+
+// import { data } from "./niceselect2/nice-select2.js";
+// niceselect2
+
 document.addEventListener("DOMContentLoaded", function () {
   const zip = document.querySelector("#zip-code"); //zip code
   const topic = document.querySelector("#topic"); // el select
+
+  // NiceSelect.bind(document.getElementById("topic"));
+  // console.log( data);
 
   //div escondidos
 

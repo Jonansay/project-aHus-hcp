@@ -10,12 +10,16 @@
       href="src/fonts/fontawesome-free-6.1.2-web/css/all.min.css"
     />
     <!-- <link rel="stylesheet" href="src/fonts/Montserrat/Montserrat.css" /> -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="build/css/app.css" />
     <link rel="stylesheet" href="build/css/spinner.css" />
+    <link rel="stylesheet" href="build/css/nice-select.css" />
   </head>
   <body>
     <section class="contact">
@@ -68,17 +72,13 @@
       </div>
     </section>
 
-
-
     <section class="stay-connected">
       <div class="wrapper">
-
         <div class="form__wrapper">
-          <form  id="form"  action="" class="form">
+          <form id="form" action="" class="form">
             <h3 class="form__title">Representative Finder</h3>
 
             <div class="form__grid">
-
               <div class="form__input-wrapper">
                 <input
                   autocomplete="postal-code"
@@ -89,14 +89,14 @@
                   placeholder="ZIP Code"
                 />
                 <div id="error-mesage " class="error-mesage">
-                  <span id="error-1" class="error-validation "
+                  <span id="error-1" class="error-validation"
                     >Please enter a valid ZIP Code</span
                   >
                 </div>
               </div>
 
-              <div class="form__topic-wrapper nice-select wide">
-                <select class="form__topic nice-select wide" id="topic">
+              <div class="form__topic-wrapper">
+                <select class="form__topic" id="topic">
                   <option value="" selected disabled>Select a Topic</option>
                   <option value="1">Disease Overview</option>
                   <option value="3">Screening for TMA</option>
@@ -116,13 +116,12 @@
                   <option value="11">Risk of TMA Recurrence</option>
                   <option value="12">Other</option>
                 </select>
-                <div  class="error-mesage">
+                <div class="error-mesage">
                   <span id="error-2" class="error-validation error-select-topic"
                     >Please select a Topic</span
                   >
                 </div>
               </div>
-
 
               <div class="form__button-field">
                 <button
@@ -145,7 +144,6 @@
         </div>
 
         <div class="form__result">
-
           <p class="form__result-desc" id="press-search">
             Press “Search” to locate a rep.
           </p>
@@ -161,19 +159,16 @@
                   >833-551-2539.</a
                 >
               </p>
-
             </div>
-          
           </div>
 
           <div class="response__convenience" id="convenience">
-          
             <div class="resonse__conteiner">
               <h1 class="response__heading">Connect at your convenience!</h1>
-           
+
               <div class="response__sub-heading">
                 <div class="response__sub-heading-img">
-                  <img src="build/img/heading-wave.svg" alt="">
+                  <img src="build/img/heading-wave.svg" alt="" />
                 </div>
                 <h3 class="response__heading-ram">RAM Name</h3>
               </div>
@@ -208,20 +203,22 @@
                 Locating a representative near you!
               </h3>
               <span class="loader"></span>
-
             </div>
-           
           </div>
         </div>
         <p class="footer__seccion">US/UNB-a/0585 V1 02/2024</p>
-
-       
       </div>
-
     </section>
-    <script src="src/js/ultimoris.js"></script>
- 
-  <script src="src/js/niceselect2/nice-select2.js"></script>
+    <script src="src/js/ultimoris.js " type="module"></script>
+
+    <script src="src//js/jquery.js"></script>
+    <script src="src/js/jquery.nice-select.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("topic").niceSelect();
+      });
+      $("topic").niceSelect("update");
+    </script>
   </body>
-  
 </html>
