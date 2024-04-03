@@ -552,6 +552,7 @@ a {
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 6px;
 }
 @media screen and (min-width: 1026px) {
@@ -658,6 +659,39 @@ a {
     gap: 32px;
     align-items: flex-start;
   }
+}
+.stay-connected .form__topic-wrapper {
+  width: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.stay-connected .nice-select {
+  width: 100%;
+  border-bottom: 1px solid #959595;
+}
+.stay-connected .nice-select.open .nice-select-dropdown {
+  width: 100%;
+  margin-top: 2px;
+}
+.stay-connected .nice-select .option {
+  text-wrap: wrap;
+  line-height: normal;
+  padding-top: 6px;
+  padding-bottom: 8px;
+}
+.stay-connected .nice-select .option.disabled {
+  display: none;
+}
+.stay-connected .form .nice-select {
+  width: 100%;
+  line-height: normal;
+}
+.stay-connected .nice-select .current {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .stay-connected .form__result {
   width: 100%;
@@ -945,6 +979,7 @@ a {
 
 #error-2 {
   display: none;
+  padding-top: 6px;
 }
 
 .response__phone-conteiner {

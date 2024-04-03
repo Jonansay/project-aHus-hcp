@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="build/css/app.css" />
     <link rel="stylesheet" href="build/css/spinner.css" />
 
-    <link rel="stylesheet" href="build/css/nice-select2.css" />
+    <!-- <link rel="stylesheet" href="build/css/nice-select2.css" /> -->
   </head>
   <body>
     <section class="contact">
@@ -96,7 +96,7 @@
                 </div>
               </div>
 
-              <div class="form__topic-wrapper">
+              <div class=" form__topic-wrapper ">
                 <select class="form__topic" id="topic">
                   <option value="" selected disabled>Select a Topic</option>
                   <option value="1">Disease Overview</option>
@@ -211,13 +211,12 @@
         <p class="footer__seccion">US/UNB-a/0585 V1 02/2024</p>
       </div>
     </section>
-    <script src="src/js/ultimoris.js " type="module"></script>
+    <script src="src/js/ahus-hcp.js " type="module"></script>
 
     <script src="src/js/niceselect2/nice-select2.js"></script>
 
     <script>
-      NiceSelect.bind(document.getElementById("topic"));
-    
+      window.niceSelectForm =  NiceSelect.bind(document.getElementById("topic"),{placeholder:'Select a Topic'});
     </script>
   </body>
 </html>

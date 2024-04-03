@@ -1,4 +1,3 @@
-
 // import { data } from "./niceselect2/nice-select2.js";
 // niceselect2
 
@@ -25,37 +24,36 @@ document.addEventListener("DOMContentLoaded", function () {
   const btn_search = document.querySelector("#search");
   const btn_restet = document.querySelector("#reset");
 
+ 
+
   ////llamando funciones
 
-  btn_search.addEventListener("click", showError);
+  // btn_search.addEventListener("click", showError);
   btn_search.addEventListener("click", showArea);
   btn_search.addEventListener("click", hiddenArea);
+  btn_search.addEventListener("click", zipVAcio);
+  btn_search.addEventListener("click", topicVacio);
   btn_restet.addEventListener("click", resetall);
-
-  // btn_search.addEventListener("click", () =>{
-  //   showError;
-  //   showArea;
-  //   hiddenArea;
-  // });
-
-  //funcion para mostrar errores
 
   //base de datos
   const zipbd = ["Saab", "Volvo", "BMW"];
   // const zipbd = [];
 
-  //funciones
-
-  function showError() {
-    if (zip.value.trim() === "" || topic.value === "0") {
-      // span_mesage.style.display = "block";
+  function zipVAcio() {
+    if (zip.value.trim() === "") {
       error_1.style.display = "block";
-      error_2.style.display = "block";
-      // divConnect.style.display = "none";
-      spinner_show.style.display = "none";
-      divResponse.style.display = "none";
     }
-    return false;
+  }
+  function topicVacio() {
+    const select = document.querySelector(".nice-select");
+    console.log(select);
+  
+    const selectContent = select.querySelector('.current').innerHTML
+    console.log(selectContent);
+
+    if (selectContent === "Select a Topic") {
+      error_2.style.display = "block";
+    }
   }
 
   function hiddenArea() {
@@ -83,8 +81,14 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function resetall() {
+    const select = document.querySelector(".nice-select");
+  
+
+    var instance =  window.niceSelectForm;
+    instance.clear();
+
     zip.value = "";
-    topic.value = 0;
+  
     press.style.display = "block";
     error_1.style.display = "none";
     error_2.style.display = "none";
