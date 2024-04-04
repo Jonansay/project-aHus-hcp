@@ -1,14 +1,12 @@
-// import { data } from "./niceselect2/nice-select2.js";
-// niceselect2
+
 
 document.addEventListener("DOMContentLoaded", function () {
   const zip = document.querySelector("#zip-code"); //zip code
   const topic = document.querySelector("#topic"); // el select
 
-  // NiceSelect.bind(document.getElementById("topic"));
-  // console.log( data);
+ 
 
-  //div escondidos
+  //hidden div
 
   const press = document.querySelector("#press-search"); //div press search
   const convenience = document.querySelector("#convenience"); //div  ram
@@ -18,38 +16,38 @@ document.addEventListener("DOMContentLoaded", function () {
   const error_2 = document.querySelector("#error-2"); //error del select
 
   const divConnect = document.querySelector("#connect");
-  console.log(divConnect);
+ 
 
-  //botones
+  //buttons
   const btn_search = document.querySelector("#search");
   const btn_restet = document.querySelector("#reset");
 
  
 
-  ////llamando funciones
+  //calling functions
 
   // btn_search.addEventListener("click", showError);
   btn_search.addEventListener("click", showArea);
   btn_search.addEventListener("click", hiddenArea);
-  btn_search.addEventListener("click", zipVAcio);
-  btn_search.addEventListener("click", topicVacio);
+  btn_search.addEventListener("click", zipEmpty);
+  btn_search.addEventListener("click",  topicEmpty);
   btn_restet.addEventListener("click", resetall);
 
   //base de datos
   const zipbd = ["Saab", "Volvo", "BMW"];
   // const zipbd = [];
 
-  function zipVAcio() {
+  function zipEmpty() {
     if (zip.value.trim() === "") {
       error_1.style.display = "block";
     }
   }
-  function topicVacio() {
+  function  topicEmpty() {
     const select = document.querySelector(".nice-select");
-    console.log(select);
+ 
   
     const selectContent = select.querySelector('.current').innerHTML
-    console.log(selectContent);
+  
 
     if (selectContent === "Select a Topic") {
       error_2.style.display = "block";

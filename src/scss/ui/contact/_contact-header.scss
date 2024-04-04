@@ -8,8 +8,6 @@
   background-image: url('../img/bg-mobile.png');
   background-size: cover;
   background-repeat: no-repeat;
-  //   background-position: center;
-  //   padding: 3rem 0 20rem 0 ;
 
   @media screen and (min-width: 768px) {
     background-image: url('../img/bg-dektop.png');
@@ -49,7 +47,6 @@
 
   &__heading {
     color: v.$white;
-
     font-family: v.$font_principal;
     font-size: 24px;
     font-style: normal;
@@ -105,6 +102,8 @@
   }
 
   &__desc-numer {
+    width: 100%;
+    max-width: 32ch;
     color: v.$white;
     font-family: v.$font_principal;
     font-size: 16px;
@@ -112,5 +111,7 @@
     font-weight: 500;
     line-height: normal;
     letter-spacing: 0.2px;
+
+
   }
 }

@@ -12,7 +12,7 @@
 
   .form__wrapper {
     width: 100%;
-    // max-width: 330px;
+
     background: v.$secundary;
     padding: 20px;
 
@@ -31,7 +31,6 @@
   .form {
     &__title {
       color: v.$white;
-
       font-family: v.$font_principal;
       font-size: 18px;
       font-style: normal;
@@ -68,56 +67,37 @@
 
     &__control-input {
       width: 100%;
-
+      height: 100%;
+      height: 32px;
       border: 0;
       outline: none;
       padding: 8px 16px;
       color: v.$lightGrey;
-
       font-size: 16px;
       font-style: normal;
       font-weight: 500;
       line-height: 16px;
+      display: flex;
+
+      align-items: center;
+      align-self: stretch;
+      border: 0;
+      outline: none;
 
       &::placeholder {
         color: v.$placeholder;
 
-        font-family: Montserrat;
+        font-family: v.$font_principal;
         font-size: 16px;
         font-style: normal;
         font-weight: 500;
         line-height: 16px;
       }
+      @media screen and (min-width: 1026px) {
+        padding: 10px 20px;
+        height: 36px;
+      }
     }
-    .nice-select {
-      border-radius: 0;
-      height: 36px;
-    }
-
-    // &__topic {
-    //   appearance: none;
-    //   width: 100%;
-    //   height: 100%;
-    //   padding: 8px 16px;
-    //   // color: #373737;
-    //   color: red;
-
-    //   &:focus {
-    //     border: none;
-    //     outline: none;
-    //   }
-    // }
-
-    // .nice-select {
-    //   width: 100%;
-    //   color: #373737;
-
-    //   font-family: Montserrat;
-    //   font-size: 16px;
-    //   font-style: normal;
-    //   font-weight: 500;
-    //   line-height: 16px;
-    // }
 
     &__button-field {
       width: 100%;
@@ -134,9 +114,9 @@
       line-height: 16px;
       letter-spacing: 0.4px;
       text-transform: uppercase;
-      transition: background 300ms ease-in-out;
       cursor: pointer;
       border: none;
+      transition: all, 0.4s, ease-in-out 1s ease-in-out;
     }
 
     &__button-search {
@@ -152,7 +132,7 @@
       }
 
       @media screen and (min-width: 1026px) {
-        flex-basis: 166px;
+        height: 36px;
       }
     }
 
@@ -182,27 +162,45 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    
- 
-   
   }
+
   .nice-select {
+    border-radius: 0;
     width: 100%;
     border-bottom: 1px solid #959595;
-  }
-  .nice-select.open .nice-select-dropdown {
-    width: 100%;
-    margin-top: 2px;
+
+    display: flex;
+    padding: 8px 20px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+
+    @media screen and (min-width: 1026px) {
+      height: 36px;
+    }
   }
   .nice-select .option {
     text-wrap: wrap;
     line-height: normal;
+    color: v.$lightGrey;
+    font-family: v.$font_principal;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
 
+    padding-bottom: 6px;
+  }
+
+  .nice-select .option:nth-child(2) {
     padding-top: 6px;
-    padding-bottom: 8px;
   }
   .nice-select .option.disabled {
     display: none;
+  }
+  .nice-select .list {
+    max-height: 100%;
+    border-radius: 0;
   }
 
   .form .nice-select {
@@ -214,99 +212,16 @@
     display: block;
     overflow: hidden;
     text-overflow: ellipsis;
+    color: #a6a6a6;
+
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
   }
-
-  // .nice-select .option {
-  //   width: 100%;
-  // }
-
-  // .form {
-
-  // .form__topic-wrapper {
-
-  //   position: relative;
-
-  //   height: 32px;
-
-  //   font-size: 16px;
-  //   font-weight: 500;
-
-  //   outline: unset;
-  // }
-
-  // &__topic {
-  //   appearance: none;
-  //   width: 100%;
-  //   height: 100%;
-  //   padding: 8px 16px;
-  //   color: #373737;
-
-  //   &:focus {
-  //     border: none;
-  //     outline: none;
-  //   }
-
-  //   option,
-  //   option:checked {
-  //     font-size: 16px;
-  //     font-weight: 300;
-  //     color: red;
-  //   }
-
-  //   option:disabled {
-  //     color: #a2a2a2;
-  //   }
-  // border: none;
-  //    appearance: none;
-  // width: 100%;
-
-  // color: v.$lightGrey;
-  // font-size: 14px;
-  // font-style: normal;
-  // font-weight: 500;
-  // line-height: normal;
-  // background-color: v.$white;
-
-  // border: 0;
-  // outline: none;
-  // padding: 8px 16px;
-
-  // &::placeholder {
-  //   color: v.$placeholder;
-
-  //   font-family: Montserrat;
-  //   font-size: 16px;
-  //   font-style: normal;
-  //   font-weight: 500;
-  //   line-height: 16px;
-  // }
-  // }
-
-  //   input {
-  //     width: 100%;
-
-  //     border: 0;
-  //     outline: none;
-  //     padding: 8px 16px;
-  //     color: v.$lightGrey;
-
-  //     font-size: 16px;
-  //     font-style: normal;
-  //     font-weight: 500;
-  //     line-height: 16px;
-  //   }
-
-  //   input::placeholder {
-  //     color: v.$placeholder;
-
-  //     font-family: Montserrat;
-  //     font-size: 16px;
-  //     font-style: normal;
-  //     font-weight: 500;
-  //     line-height: 16px;
-  //   }
-
-  // }
+  .option.selected.focus {
+    background-color: #ededed;
+  }
 
   .form__result {
     width: 100%;
@@ -319,13 +234,13 @@
     margin-right: auto;
 
     height: 100%;
-    // height: 252.8px;
-    min-height: 252.8px;
+    height: 252.8px;
+    // min-height: 252.8px;
 
     @media screen and (min-width: 1026px) {
       max-width: 1026px;
       padding-top: 28px;
-      min-height: 180px;
+      height: 180px;
     }
 
     &-desc {
