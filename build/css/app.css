@@ -518,13 +518,14 @@ a {
   margin-left: auto;
   margin-right: auto;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1026px) {
   .stay-connected .form__wrapper {
     max-width: 1026px;
     padding-top: 28px;
     padding-bottom: 38px;
     padding-right: 32px;
     padding-left: 32px;
+    height: 142px;
   }
 }
 .stay-connected .form__title {
@@ -616,12 +617,14 @@ a {
   .stay-connected .form__control-input {
     padding: 10px 20px;
     height: 36px;
+    margin-top: 2px;
   }
 }
 .stay-connected .form__button-field {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .stay-connected .form__button {
   color: #ffffff;
@@ -687,6 +690,20 @@ a {
   align-items: center;
   align-self: stretch;
 }
+.stay-connected .nice-select::after {
+  width: 13px;
+  height: 8px;
+  background-image: url("../img/chevron-down.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+.stay-connected .nice-select.open::after {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
 @media screen and (min-width: 1026px) {
   .stay-connected .nice-select {
     height: 36px;
@@ -712,6 +729,11 @@ a {
 .stay-connected .nice-select .list {
   max-height: 100%;
   border-radius: 0;
+  max-height: 200px;
+  overflow: hidden;
+  overflow-y: scroll;
+  box-sizing: border-box;
+  padding: 0;
 }
 .stay-connected .form .nice-select {
   width: 100%;
@@ -728,6 +750,12 @@ a {
   font-weight: 400;
   line-height: 18px;
 }
+.stay-connected .nice-select .nice-select-dropdown {
+  margin-top: 2px;
+}
+.stay-connected .nice-select.open .nice-select-dropdown {
+  min-width: 100%;
+}
 .stay-connected .option.selected.focus {
   background-color: #ededed;
 }
@@ -743,7 +771,6 @@ a {
 @media screen and (min-width: 1026px) {
   .stay-connected .form__result {
     max-width: 1026px;
-    padding-top: 28px;
     height: 180px;
   }
 }
@@ -794,7 +821,6 @@ a {
 #convenience .resonse__conteiner {
   display: flex;
   padding-top: 8px;
-  padding-bottom: 28px;
   padding-left: 20px;
   padding-right: 20px;
   flex-direction: column;
@@ -815,6 +841,7 @@ a {
     margin-left: auto;
     margin-right: auto;
     padding: 0;
+    margin-top: 29.6px;
   }
 }
 #convenience .resonse__conteiner .response__heading {
@@ -874,13 +901,18 @@ a {
 }
 #convenience .resonse__conteiner .response__heading-ram::before {
   content: "";
-  width: 265px;
+  width: 235px;
   position: absolute;
   bottom: -16px;
   border-bottom: 1px solid #939393;
   stroke-width: 1px;
   stroke: #939393;
   opacity: 0.3;
+}
+@media screen and (min-width: 375px) {
+  #convenience .resonse__conteiner .response__heading-ram::before {
+    width: 265px;
+  }
 }
 @media screen and (min-width: 1026px) {
   #convenience .resonse__conteiner .response__heading-ram::before {

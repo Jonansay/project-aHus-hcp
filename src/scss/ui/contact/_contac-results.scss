@@ -1,29 +1,22 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
 
-
-
-#press-search{
-  
+#press-search {
   // display: none;
   display: block;
 }
 
-
 //div call alexion
-#response{
- 
+#response {
   display: none;
 }
 
-#convenience{
-
-
+#convenience {
   .resonse__conteiner {
     display: flex;
 
     padding-top: 8px;
-    padding-bottom: 28px;
+
     padding-left: 20px;
     padding-right: 20px;
     flex-direction: column;
@@ -44,7 +37,7 @@
       margin-left: auto;
       margin-right: auto;
       padding: 0;
-      //   margin-top:29px;
+      margin-top: 29.6px;
     }
 
     .response__heading {
@@ -88,12 +81,10 @@
           background: #828282;
 
           opacity: 0.3;
-          @media screen and (min-width: 1440px){
+          @media screen and (min-width: 1440px) {
             top: -14px;
           }
         }
-
-     
       }
     }
 
@@ -108,7 +99,7 @@
 
       &::before {
         content: '';
-        width: 265px;
+        width: 235px;
         position: absolute;
         bottom: -16px;
 
@@ -117,6 +108,10 @@
         stroke: #939393;
 
         opacity: 0.3;
+
+        @media screen and (min-width: 375px) {
+          width: 265px;
+        }
 
         @media screen and (min-width: 1026px) {
           display: none;
@@ -173,12 +168,10 @@
 }
 
 //Please call Alexion Connect div
-#convenience{
+#convenience {
   display: none;
   // display: block;
 }
-
-
 
 .response-connect {
   display: flex;
@@ -272,7 +265,6 @@
   padding-top: 6px;
 }
 
-
 .response__phone-conteiner {
   position: relative;
   display: flex;
@@ -321,7 +313,7 @@
   @media screen and (min-width: 1026px) {
     margin-top: 0;
     @media screen and (min-width: 1026px) {
-     margin-left: 36px;
+      margin-left: 36px;
       &::after {
         content: '';
         position: absolute;
@@ -332,7 +324,6 @@
         margin-top: auto;
         margin-bottom: auto;
         background: #828282;
-       
 
         opacity: 0.3;
       }
