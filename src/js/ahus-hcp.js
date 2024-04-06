@@ -34,8 +34,8 @@ document.addEventListener("DOMContentLoaded", function () {
   btn_restet.addEventListener("click", resetall);
 
   //base de datos
-  const zipbd = ["Saab", "Volvo", "BMW"];
-  // const zipbd = [];
+  // const zipbd = ["Saab", "Volvo", "BMW"];
+  const zipbd = [];
 
   function zipEmpty() {
     if (zip.value.trim() === "") {

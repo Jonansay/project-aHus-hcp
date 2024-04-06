@@ -729,7 +729,7 @@ a {
 .stay-connected .nice-select .list {
   max-height: 100%;
   border-radius: 0;
-  max-height: 200px;
+  max-height: 219px;
   overflow: hidden;
   overflow-y: scroll;
   box-sizing: border-box;
@@ -971,20 +971,21 @@ a {
 
 .response-connect {
   display: flex;
-  padding: 74.4px 30px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 8px;
   align-self: stretch;
   text-align: center;
+  margin-top: 54.4px;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 @media screen and (min-width: 1026px) {
   .response-connect {
     width: 100%;
     max-width: 1026px;
-    height: 180px;
-    padding-top: 22px;
+    margin-top: 30px;
     padding-bottom: 0;
     padding-bottom: 70px;
     justify-content: center;
