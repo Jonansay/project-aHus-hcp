@@ -729,7 +729,7 @@ a {
 .stay-connected .nice-select .list {
   max-height: 100%;
   border-radius: 0;
-  max-height: 219px;
+  max-height: 235px;
   overflow: hidden;
   overflow-y: scroll;
   box-sizing: border-box;
@@ -820,7 +820,7 @@ a {
 
 #convenience .resonse__conteiner {
   display: flex;
-  padding-top: 8px;
+  margin-top: 8px;
   padding-left: 20px;
   padding-right: 20px;
   flex-direction: column;
@@ -841,7 +841,7 @@ a {
     margin-left: auto;
     margin-right: auto;
     padding: 0;
-    margin-top: 29.6px;
+    margin-top: 33px;
   }
 }
 #convenience .resonse__conteiner .response__heading {

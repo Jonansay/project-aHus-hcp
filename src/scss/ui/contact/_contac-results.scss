@@ -15,7 +15,7 @@
   .resonse__conteiner {
     display: flex;
 
-    padding-top: 8px;
+    margin-top: 8px;
 
     padding-left: 20px;
     padding-right: 20px;
@@ -37,7 +37,7 @@
       margin-left: auto;
       margin-right: auto;
       padding: 0;
-      margin-top: 29.6px;
+      margin-top: 33px;
     }
 
     .response__heading {
@@ -175,7 +175,7 @@
 
 .response-connect {
   display: flex;
-  
+
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -190,8 +190,7 @@
     width: 100%;
     max-width: 1026px;
     margin-top: 30px;
-  
-    
+
     padding-bottom: 0;
     padding-bottom: 70px;
 
